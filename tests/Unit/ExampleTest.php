@@ -2,6 +2,7 @@
 
 namespace Tests\Unit;
 
+use Imagick;
 use PHPUnit\Framework\TestCase;
 
 class ExampleTest extends TestCase
@@ -13,6 +14,7 @@ class ExampleTest extends TestCase
      */
     public function testBasicTest()
     {
-        $this->assertTrue(true);
+        $img = new Imagick(__DIR__.'/example.pdf');
+        $this->assertEquals(1, $img->getNumberImages());
     }
 }
