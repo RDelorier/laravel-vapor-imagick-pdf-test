@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $img = new Imagick(__DIR__.'/../tests/Unit/example.pdf');
-    $img->writeImages(__DIR__.'/../storage/app/example-web.png', true);
+    $img = new Imagick(__DIR__.'/example.pdf');
+    $img->writeImages(__DIR__.'/example-web.png', true);
     $pages = $img->getNumberImages();
     return response("{$pages} pages converted to images");
 });
