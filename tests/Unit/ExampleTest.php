@@ -16,5 +16,6 @@ class ExampleTest extends TestCase
     {
         $img = new Imagick(__DIR__.'/example.pdf');
         $this->assertEquals(1, $img->getNumberImages());
+        $img->writeImage(__DIR__ . '/../../storage/app/example.png');
     }
 }
